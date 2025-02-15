@@ -109,6 +109,27 @@ int main(){
 
 
 
+ void available_doctor()
+{
+	FILE *fp,*fd;
+	fd=fopen("doctor.txt","r");
+	fp=fopen("patient.txt","r");
+	
+	
+
+while(fscanf(fp,"%s %d %s %s %s %s %s" ,patient.pname,&patient.age,patient.gender,patient.address,patient.symptomes,patient.checkby,patient.date)!=EOF){
+}
+ fclose(fp);
+ while(	fscanf(fd,"%d %s %s %s %s",&doc.docid,doc.dname,doc.specialized,doc.docaddress,doc.date)!=EOF)
+	if(strcmp(patient.date,doc.date)==0)
+	printf("The doctor  is available for that date");
+	else 
+	printf("The doctor is not av ailale for that date");
+	fclose(fd);
+	
+	
+}
+
 
 
     return 0;
